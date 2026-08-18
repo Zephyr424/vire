@@ -1,0 +1,4 @@
+print(100 + 200)
+a = 39
+print(a)
+syscall(a, 0, 0, 0)
