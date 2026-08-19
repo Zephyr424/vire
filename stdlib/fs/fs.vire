@@ -1,0 +1,5 @@
+// fs.vire - Vire 文件系统标准库
+open = (path, mode) => syscall(101, path, mode, 0)
+read = (handle) => syscall(102, handle, 0, 0)
+write = (handle, data) => syscall(103, handle, data, 0)
+close = (handle) => syscall(104, handle, 0, 0)

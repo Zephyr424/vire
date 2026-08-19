@@ -7,8 +7,9 @@
 ```bash
 git clone https://github.com/vire-lang/vire.git
 cd vire
-.\tcc\tcc.exe -I .\tcc\include -L .\tcc\lib -o vire.exe src\vire.c
+go build -o vire.exe vire.go
 ```
+需要安装 Go 1.21 或更高版本：https://go.dev/dl/
 
 ## 示例
 

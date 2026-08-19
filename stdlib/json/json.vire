@@ -1,0 +1,2 @@
+// json.vire - Vire JSON 解析（极简）
+get = (json_str, key) => syscall(200, json_str, key, 0)

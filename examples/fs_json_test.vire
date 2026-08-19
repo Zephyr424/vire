@@ -1,0 +1,29 @@
+// 写入文件
+f = syscall(101, "test.txt", "w", 0)
+syscall(103, f, "Hello Vire!", 0)
+syscall(104, f, 0, 0)
+
+// 读取文件
+f = syscall(101, "test.txt", "r", 0)
+content = syscall(102, f, 0, 0)
+print(content)
+syscall(104, f, 0, 0)
+
+// JSON 取值
+json_str = "{\"name\":\"Vire\",\"version\":\"0.1\"}"
+name = syscall(200, json_str, "name", 0)
+version = syscall(200, json_str, "version", 0)
+print(name)
+print(version)
+
+// 系统信息
+os = syscall(0, 0, 0, 0)
+print(os)
+pid = syscall(1, 0, 0, 0)
+print(pid)
+
+// 时间
+ts = syscall(501, 0, 0, 0)
+print(ts)
+timestr = syscall(502, 0, 0, 0)
+print(timestr)
